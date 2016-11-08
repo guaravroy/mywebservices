@@ -1,0 +1,107 @@
+
+/* Remove the navbar's default margin-bottom and rounded borders */
+.navbar {
+	margin-bottom: 0;
+	border-radius: 0;
+}
+
+/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+.row.content {
+	height: 450px
+}
+
+/* Set gray background color and 100% height */
+.sidenav {
+	padding-top: 20px;
+	background-color: #f1f1f1;
+	height: 100%;
+}
+
+/* Set black background color, white text and some padding */
+footer {
+	background-color: #555;
+	color: white;
+	padding: 15px;
+}
+
+/* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 767px) {
+	.sidenav {
+		height: auto;
+		padding: 15px;
+	}
+	.row.content {
+		height: auto;
+	}
+}
+
+#game-wrap {
+	width: 80%;
+	height: 10.70em;
+	margin: 0 auto;
+	background: gray;
+	margin-top: 50px;
+	border-left: 5px solid gray;
+	border-top-right-radius: 20px;
+	border-top-left-radius: 20px;
+}
+
+.row1 {
+	width: 110%;
+	height: 30%;
+}
+
+.col1 {
+	width: 30%;
+	height: 113%;
+	border: 3px solid white;
+	float: left;
+	text-align: center;
+	font-size: 2.85em;
+	font-family: helvetica;
+	color: white;
+	cursor: pointer;
+}
+
+.matched {
+	color: maroon;
+}
+
+.player-1-color {
+	color: maroon;
+}
+
+.col1:nth-child(1) {
+	border-left: none;
+}
+
+.col1:nth-child(3) {
+	border-right: none;
+}
+
+.row1:nth-child(1) .col {
+	border-top: none;
+	margin-top: 3px;
+}
+
+.row1:nth-child(3) .col {
+	border-bottom: none;
+	margin-bottom: 3px;
+}
+
+#panel {
+	width: 80%;
+	padding: 0.25em;
+	margin: auto;
+	background: #2E6290;
+	border-bottom-right-radius: 20px;
+	border-bottom-left-radius: 20px;
+}
+
+#board {
+	font-size: 25px;
+	font-family: helvetica;
+	color: whitesmoke;
+	margin-top: 10px;
+}
+
