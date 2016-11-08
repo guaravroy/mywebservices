@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Bootstrap Example</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+/* Remove the navbar's default margin-bottom and rounded borders */
+.navbar {
+	margin-bottom: 0;
+	border-radius: 0;
+}
+
+/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+.row.content {
+	height: 450px
+}
+
+/* Set gray background color and 100% height */
+.sidenav {
+	padding-top: 20px;
+	background-color: #f1f1f1;
+	height: 100%;
+}
+
+/* Set black background color, white text and some padding */
+footer {
+	background-color: #555;
+	color: white;
+	padding: 15px;
+}
+
+/* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 767px) {
+	.sidenav {
+		height: auto;
+		padding: 15px;
+	}
+	.row.content {
+		height: auto;
+	}
+}
+
+#game-wrap {
+	width: 80%;
+	height: 10.70em;
+	margin: 0 auto;
+	background: gray;
+	margin-top: 50px;
+	border-left: 5px solid gray;
+	border-top-right-radius: 20px;
+	border-top-left-radius: 20px;
+}
+
+.row {
+	width: 120%;
+	height: 30%;
+}
+
+.col {
+	width: 30%;
+	height: 111%;
+	border: 3px solid white;
+	float: left;
+	text-align: center;
+	font-size: 2.85em;
+	font-family: helvetica;
+	color: white;
+	cursor: pointer;
+}
+
+.matched {
+	color: maroon;
+}
+
+.player-1-color {
+	color: maroon;
+}
+
+.col:nth-child(1) {
+	border-left: none;
+}
+
+.col:nth-child(3) {
+	border-right: none;
+}
+
+.row1:nth-child(1) .col {
+	border-top: none;
+	margin-top: 3px;
+}
+
+.row:nth-child(3) .col {
+	border-bottom: none;
+	margin-bottom: 3px;
+}
+
+#panel {
+	width: 80%;
+	padding: 0.25em;
+	margin: auto;
+	background: #2E6290;
+	border-bottom-right-radius: 20px;
+	border-bottom-left-radius: 20px;
+}
+
+#board {
+	font-size: 25px;
+	font-family: helvetica;
+	color: whitesmoke;
+	margin-top: 10px;
+}
+</style>
+<script type="text/javascript" src="jquery-1.11.0.js"></script>
+<script src="game.js" type="text/javascript"></script>
+
+</head>
+<body>
+	<div class="container-fluid"
+		style="background-color: #2E6290; color: #fff; height: 90px;">
+		<a href="index.html"><img src="wds.png"
+			/style="height: 65%; width: 40%; padding-top: 20px; margin-bottom: -3px;"></a>
+
+	</div>
+
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target="#myNavbar">
+					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">Logo</a>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#">Home</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Projects</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#"><span class="glyphicon glyphicon-log-in"></span>
+							Login</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container-fluid text-center">
+		<div class="row content">
+			<div class="col-sm-2 sidenav">
+				<h3>see Also</h3>
+				<p>
+					<a href="#">Link</a>
+				</p>
+				<p>
+					<a href="#">Link</a>
+				</p>
+				<p>
+					<a href="#">Link</a>
+				</p>
+				<p>
+					<a href="#">Link</a>
+				</p>
+				<p>
+					<a href="#">Link</a>
+				</p>
+				<p>
+					<a href="#">Link</a>
+				</p>
+
+				<div id="game-wrap">
+
+
+					<div class="row">
+						<div class="col"></div>
+						<div class="col"></div>
+						<div class="col"></div>
+					</div>
+
+					<div class="row">
+						<div class="col"></div>
+						<div class="col"></div>
+						<div class="col"></div>
+					</div>
+
+					<div class="row">
+						<div class="col"></div>
+						<div class="col"></div>
+						<div class="col"></div>
+					</div>
+
+				</div>
+
+				<div id="panel">
+					<input type="text" id="player-1-inp" placeholder="Enter player 1"
+						size="10"> <input type="text" id="player-2-inp"
+						placeholder="Enter player 2" size="10"> <input
+						type="button" id="playButton" value="play">
+					<h1 id="board"></h1>
+				</div>
+				<p style="margin-left: 30px; font-weight: bold;">play
+					Tic-Tac-Toe game
+				<p>
+			</div>
+			<div class="col-sm-8 text-left">
+				<h1>
+					<a
+						href="http://www.websearchdownloads.com/top-website-to-learn-programming-languages-like-c-c++-java-python-etc.html">Top
+						website to learn programming languages</a>
+				</h1>
+				<div>
+					Posted on 24-10-2016 by Gaurav Published by: <a
+						href='http://www.websearchdownloads.com/'>WebDownloads</a>
+				</div>
+
+				<p>Welcome to webDownloads, a website for valid information
+					about best site to learn programming languages</p>
+
+
+
+
+
+
+				<h2>
+					<a href="http://www.javatpoint.com/" target="_blank" rel="nofollow">javatpoint
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+				</h2>
+
+
+				<p>
+					javatpoint is a great <a
+						href="http://www.websearchdownloads.com/top-website-to-learn-programming-languages-like-c-c++-java-python-etc.html">website
+						to learn programming languages</a> which lets you learn top
+					programming languages like c++,java,python.This website also
+					provide you best way for making web application and also provide
+					you to learn sql,plsql and many more modern laguages <a
+						href="http://www.javatpoint.com/" target="_blank" rel="nofollow">go
+						to javatpoint</a>
+				</p>
+
+				<h2>
+					<a href="https://www.codecademy.com/learn" target="_blank"
+						rel="nofollow">codecademy</a>
+				</h2>
+
+				<p>
+					codecademy is a best website to learn scripting languages like
+					javascript ,ruby etc.This website also provide you to learn
+					html,css .It also provides you to learn modern languages like
+					reactjs ,jquery etc.The best thing in this website is providing you
+					to online compiler for learning programming languages instantly. <a
+						href="https://www.codecademy.com/learn" target="_blank"
+						rel="nofollow">go to codecademy to learn programming languages</a>
+				</p>
+
+				<h2>
+					<a href="http://www.w3schools.com/" target="_blank" rel="nofollow">w3school</a>
+				</h2>
+
+				<p>
+					w3school is a <a
+						href="http://www.websearchdownloads.com/top-website-to-learn-programming-languages-like-c-c++-java-python-etc.html">
+						great website for learning languages </a>which is used in making web
+					application.This website provides you to learn languages like
+					html,css,javascript,angularjs,jquery,bootstrap.<a
+						href="http://www.w3schools.com/" target="_blank" rel="nofollow">go
+						to w3school</a>
+				</p>
+				<h2>
+					<a href="https://www.tutorialspoint.com/" target="_blank"
+						rel="nofollow">tutorialspoint</a>
+				</h2>
+
+				<p>
+					tutorialspoint is one of the best and oldest website to learn
+					programming languagess.This website provides you to leaarn many
+					languages like c,c++,java,python and many more.This website
+					provides you online compiler to learn quickly. <a
+						href="https://www.tutorialspoint.com/" target="_blank"
+						rel="nofollow">go for tutorialspoint here</a>
+				</p>
+				<h2>
+					<a href="http://www.geeksforgeeks.org/">geeksforgeeks</a>
+				</h2>
+
+				<p>
+					geeksforgeeks is <a
+						href="http://www.websearchdownloads.com/top-website-to-learn-programming-languages-like-c-c++-java-python-etc.html">
+						best website to learn programming mythodology.</a>This website
+					provides you to leaarn data structure,various algorithm.This ia a
+					very useful website for computer science students.you should go for
+					this website once. It also provides you to solve programmnig
+					puzzle.<a href="http://www.geeksforgeeks.org/" target="_blank"
+						rel="nofollow">go for geeksforgeeks portal</a>"
+				</p>
+
+			</div>
+			<div class="col-sm-2 sidenav">
+				<div class="well">
+					<p>ADS</p>
+				</div>
+				<div class="well">
+					<p>ADS</p>
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid text-center">
+
+
+			<div class="row">
+				<div class="col-xs-0 col-md-2 col-lg-2"></div>
+				<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+
+					<div class="col-xs-12 col-sm-6 col-md-3 padd">
+						<div class="hovereffect">
+							<img class="img-responsive center-block " src="two.png" alt="">
+							<div class="overlay">
+<h2>hgsfdjhasd</h2>
+								<a class="info" href="#">Play</a>
+								
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-3 padd">
+						<div class="hovereffect">
+							<img class="img-responsive center-block" src="two.png" alt="">
+							<div class="overlay">
+
+								<a class="info" href="#">Play</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-3 padd">
+						<div class="hovereffect">
+							<img class="img-responsive center-block" src="two.png" alt="">
+							<div class="overlay">
+
+								<a class="info" href="#">Play</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-3 padd">
+						<div class="hovereffect">
+							<img class="img-responsive center-block" src="two.png" alt="">
+							<div class="overlay">
+
+								<a class="info" href="#">Play</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+
+
+
+
+		</div>
+	</div>
+	<footer class="container-fluid text-center">
+		<h3>Disclaimer</h3>
+		<p>The content included in this Website has been compiled from a
+			variety of sources. Certain links on this web site lead to resources
+			located on servers that are not maintained by our website or under
+			its control. This website is not responsible for the contents of any
+			such referenced websites or for the availability of access to such
+			websites.</p>
+
+
+		<p>© WebDownloads 2016</p>
+
+	</footer>
+</body>
+</html>
